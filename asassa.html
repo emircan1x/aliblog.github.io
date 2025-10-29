@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Özgür Ozan Tanıtım Sayfası</title>
+    <style>
+        /* GENEL STİL */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to right, #f7f7f7, #e0e0e0);
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .bio {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .bio h2 {
+            margin-top: 0;
+        }
+
+        button {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .fun-fact {
+            margin-top: 20px;
+            font-style: italic;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Özgür Ozan</h1>
+        <p>Genç ve yetenekli bir oyuncu</p>
+    </header>
+
+    <main>
+        <div class="bio">
+            <h2>Hakkında</h2>
+            <p>Özgür Ozan, tiyatro ve sinema dünyasında adını duyurmuş, çeşitli projelerde başarılı performanslar sergileyen bir oyuncudur. Yaratıcı ve enerjik sahne tarzıyla izleyicilerin beğenisini kazanmıştır.</p>
+        </div>
+
+        <button onclick="showFunFact()">Bir Eğlenceli Bilgi Göster</button>
+        <p class="fun-fact" id="funFact"></p>
+    </main>
+
+    <script>
+        // JavaScript kısmı
+        function showFunFact() {
+            const facts = [
+                "Özgür Ozan, küçük yaşta tiyatroya başlamıştır.",
+                "Favori rolü dramadır.",
+                "Sahne arkasında en çok kahve içer.",
+                "Hayvanları çok sever ve bir köpeği vardır."
+            ];
+
+            // Rasgele bir bilgi seç
+            const randomIndex = Math.floor(Math.random() * facts.length);
+            const fact = facts[randomIndex];
+
+            document.getElementById("funFact").textContent = fact;
+        }
+    </script>
+</body>
+</html>
